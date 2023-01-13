@@ -21,9 +21,9 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 5;
+        speed = 7;
         turnspeed = 250;
-        jumphight = 4;
+        jumphight = 6;
         GroundDistance = 0.03f;
 
        _playerAnim = GetComponent<Animator>();
