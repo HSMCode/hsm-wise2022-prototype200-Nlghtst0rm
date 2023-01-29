@@ -7,9 +7,14 @@ public class OutOfBounds : MonoBehaviour
     public Transform player;
     public float x, y, z;
 
+    public bool gameIsOver;
+
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
-        player.position = new Vector3(x, y, z);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            player.position = new Vector3(x, y, z);
+            gameIsOver = true;
+        }
     }
 }
